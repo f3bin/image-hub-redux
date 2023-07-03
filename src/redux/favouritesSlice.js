@@ -10,8 +10,7 @@ reducers:{
          state.push(action.payload)
      }    ,
      dislike(state,action){
-         return state.filter(item => item.id !== action.payload)
-    
+         return state.filter(item => item.id !== action.payload)  
      }
 }
 })

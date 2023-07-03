@@ -13,11 +13,8 @@ export const getImages = createAsyncThunk('images/get', async () => {
           }
      })
      const result = await response.json();
-     console.log(result);
      return result;
 })
-
-
 
 const imageSlice = createSlice({
      name: 'images',

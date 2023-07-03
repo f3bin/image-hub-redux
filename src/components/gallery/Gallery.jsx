@@ -12,7 +12,7 @@ const Gallery = () => {
 
   useEffect(() => {
     dispatch(getImages());
-  }, [dispatch]);
+  }, [  ]);
 
   const addToFavourites = (item) => dispatch(like(item));
   const removeFromFavourites = (item) => dispatch(dislike(item.id));
@@ -24,11 +24,11 @@ const Gallery = () => {
 
       {images.photos &&
         images.photos.map((item) => {
-          const isFavorite = favouriteList.find((favItem) => favItem.id === item.id);
+          const isLiked = favouriteList.find((favItem) => favItem.id === item.id);
           return (
             <div className="gallery-item" key={item.id}>
               <img src={item.src.original} alt="" />
-              {isFavorite ? (
+              {isLiked ? (
                 <AiFillHeart
                   className="gallery-icon"
                   size={35}
@@ -42,7 +42,8 @@ const Gallery = () => {
                   color="white"
                   onClick={() => addToFavourites(item)}
                 />
-              )}
+              )
+              }
             </div>
           );
         })}
