@@ -16,11 +16,11 @@ function App() {
     </Route>
   ));
   return (
-  
-      <div className="App">
-   <RouterProvider router={router} />
+
+    <div className="App"> 
+      <RouterProvider router={router} />
     </div>
-   
+
   );
 }
 

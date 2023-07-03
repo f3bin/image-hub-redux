@@ -1,33 +1,37 @@
 .gallery-container {
-     padding-top:30px;
+     padding-top: 30px;
      width: 99vw;
      height: fit-content;
      display: flex;
      justify-content: center;
      flex-wrap: wrap;
      gap: 5px;
-     background-color: rgba(255, 255, 0, 0.2);
+     background-color: rgba(252, 252, 252, 0.2);
 
      .gallery-item {
           background-color: rgb(241, 208, 174);
-          width: 18%;
-          height: 450px;
+          width: 12%;
+          height: 300px;
           display: flex;
           flex-direction: column;
           margin: 5px;
           border-radius: 15px;
+          position: relative;
 
 
           img {
                width: 100%;
-               height: 88%;
+               height: 100%;
+              border-radius: 15px;
           }
 
           .gallery-icon {
                margin: 5px 9px 0 0;
                align-self: flex-end;
-               color: rgba(255, 0, 0,0.7);
                cursor: pointer;
+               position: absolute;
+               bottom: 5px;
+        
           }
      }
 }
